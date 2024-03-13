@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #f3f3f3;
+            font-family: Arial, Helvetica, sans-serif;
+            color: black;
+            margin: 0;
+        }
+
+        h3 {
+            margin: 0;
+            text-transform: uppercase;
+            font-size: 15px;
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .inner {
+            background-color: #fff;
+            border-radius: 10px;
+            max-width: 100%;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+        }
+
+        .img-holder {
+            width: 100%;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .img-holder img {
+            max-width: 100%;
+        }
+
+        form {
+            width: 100%;
+        }
+
+        input {
+            width: 100%;
+            margin-bottom: 10px;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 25px;
+            display: block;
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+
+        .button {
+            padding: 15px;
+            cursor: pointer;
+            background-color: #FF735C;
+            color: #fff;
+            border: none;
+            border-radius: 25px;
+            margin-top: 20px;
+            transition: background-color 0.3s, transform 0.3s;
+            font-size: 16px;
+        }
+
+        .button:hover {
+            background-color: #fb6048;
+            transform: scale(1.05);
+        }
+
+        .button:active {
+            transform: scale(0.95);
+        }
+
+        span {
+            text-align: center;
+            display: block;
+            margin-top: 10px;
+        }
+
+        @media screen and (min-width: 768px) {
+            .inner {
+                margin-top: 8rem;
+                max-width: 850px;
+                flex-direction: row; 
+                justify-content: space-between; 
+                align-items: center;
+            }
+
+            .img-holder {
+                width: 50%;
+                text-align: center;
+                margin-bottom: 0;
+                padding-right: 20px;
+                order: 0;
+                margin-right: 20px;
+            }
+
+            form {
+                width: 50%;
+                padding-left: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="inner">
+            <div class="img-holder">
+                <img src="https://img.freepik.com/free-vector/tablet-login-concept-illustration_114360-7863.jpg?w=740&t=st=1708686017~exp=1708686617~hmac=104f521603135816c460ce334cbe96f1ca6a32950fc58554db8bcf6a9956ceb9"
+                    alt="img">
+            </div>
+            <form name="myform" action="signin.html">
+                <h3>Signin Form</h3>
+                <div class="form-wrapper">
+                    <input type="text" placeholder="Email Address" class="form-control" name="email">
+                </div>
+                <div class="form-wrapper">
+                    <input type="password" placeholder="Password " class="form-control" name="password">
+                </div>
+                <input type="button" class="button" name="signIn" value="Sign In" onclick="validForm()">
+                <br><br>
+                <span>For registration? <a href="index.html">Sign Up</a></span>
+            </form>
+        </div>
+    </div>
+<script src="signin.js"></script>
+
+</body>
+
+</html>
